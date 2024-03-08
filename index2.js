@@ -4,7 +4,7 @@ const {convertXML, createAST} = require("simple-xml-to-json")
 
 // TODO: make metar code as a variable excec command and run multiple thread and save it into DB (mysql, postgres....)
 // Require Window machine, linux mac not working
-exec(`mweather.exe /sxml test.xml -metar "AGGH 050800Z 00000KT 9999 HZ FEW018 SCT300 28/23 Q1008"`, (error, stdout, stderr) => {
+exec(`mweather.exe /sxml test.xml -file "./00Z.TXT"`, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
